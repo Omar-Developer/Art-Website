@@ -1,0 +1,246 @@
+@mixin landpages-style($h) {
+  position: relative;
+  background-size: cover;
+  min-height: $h;  
+} 
+
+@mixin overlay-style($z,$h) {
+  position: absolute;
+  width: 100%;
+  height: $h;
+  left: 0;
+  top: 0;
+  z-index: $z;    
+}
+    
+    html {overflow-x:hidden;}
+   
+   
+
+.landpage-page-1{
+  @include landpages-style(120vh);
+  background-color: white;
+  
+  .overlay-page-1{
+  @include overlay-style(2,100%);
+ 
+  #myVideo {
+    right: 0;
+    bottom: 0;
+    min-width: 100%;
+    height: 120vh;
+    
+  }
+  
+  
+}
+}
+.landpage-page-2{
+  @include landpages-style(120vh);
+ 
+
+  background-color: white;
+  
+  .overlay-page-2{
+  @include overlay-style(2,100%);
+   
+h1{
+  position: absolute;
+font-size: 74px;
+top: 50px;
+left: 50%;
+    transform: translate(-50%, -50%);
+    color: black;
+    font-weight: 700;
+  }
+
+.container{
+  top: 200px;
+  left: 5.5%;
+  position: absolute;
+  width: 100%;
+  overflow-y: scroll;
+  height: 500px;
+  .project{
+ 
+margin-top: 30px;
+margin-left: 30px;
+      height: 225px;
+width: 360px;
+// background-color: #333;
+background-size: cover;
+// background-image: url('../images/image_1.jpg');
+.view{
+  height: 100%;
+  position: absolute;
+  left: 0;
+width:100%;
+display: none;
+}
+
+&:hover{
+ 
+  cursor: pointer;
+  .view{
+    background-color: rgba(255, 255, 255, 0.404);
+    opacity: 1;
+    display: block;
+    } 
+  
+    p{  
+ position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+color: #333;
+font-size: 20px;
+
+}
+
+}
+
+}
+
+}}}
+
+
+
+
+.landpage-page-3{
+  @include landpages-style(50vh);
+ 
+  background-color: white;
+
+  .overlay-page-3{
+  @include overlay-style(2,100%);
+  
+  .container{
+    position: absolute;
+    top: 50%;
+    width: 600px;
+    
+left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    h1{
+font-size: 74px;
+    color: black;
+    margin-bottom: 30px;
+    font-weight: 700;
+  }
+  }
+  }
+}
+
+
+
+
+.landpage-page-4{
+  @include landpages-style(120vh);
+ 
+  background-color: white;
+
+  .overlay-page-4{
+  @include overlay-style(2,100%);
+  
+  .container{
+    position: absolute;
+    top: 50%;
+    width: 600px;
+     
+left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    h1{
+font-size: 74px;
+    color: black;
+    margin-bottom: 30px;
+    font-weight: 700;
+}
+
+
+form{
+  width: 500px;
+  text-align: left;
+
+}
+
+  }
+  }
+}
+
+.btn.btn-default{
+  position: absolute;
+  right: 85px;
+  background-color: black;
+  color: white;
+  padding: 12px;
+  width: 170px;
+  &:hover{
+    background-color: rgba(255, 255, 255, 0.404);
+    color: #333;
+  }
+}
+
+
+.Social-media{
+  margin-top: 25px;
+  i{   
+&:hover{
+  cursor: pointer;
+}
+ 
+  }
+}
+
+body{
+  font-family: Arial,Helvetica,sans-serif;
+
+}
+.page-1{
+  @include landpages-style(80vh);
+ 
+  background-image: url("../images/image-2.png");
+  background-size: cover;
+}
+.page-2{
+  @include landpages-style(90vh);
+  background-image: url("../images/image-1.jpg");
+  background-size: cover;
+}
+
+
+.landpage-page-project_info{
+  @include landpages-style(200vh);
+  background-color: rgb(223, 217, 217);
+  .overlay-page-project_info{
+    @include overlay-style(2,100%);
+   
+    .container{
+      position: absolute;
+      top: 20%;
+      .img{
+        height: 600px;
+        width: 80%;
+        background-size: cover;
+        margin-top: 60px;
+        margin-bottom: 50px;
+      }
+      h2{
+        font-size: 44px;
+        font-weight: 700px;
+        margin-bottom: 30px;
+      }
+      p{
+        font-size: 15px;
+      }
+      .go_back{
+        &:hover{
+          cursor: pointer;
+        }
+      }
+    }
+
+  }
+}
+@import './navigation_bar','./media_screen';
